@@ -3,150 +3,150 @@
 
 # Creating User Class
 class User:
-    def __init__(self, firstName, lastName, wentworthID):
-        self.firstName = firstName
-        self.lastName = lastName
+    def __init__(self, first_name, last_name, wentworthID):
+        self.first_name = first_name
+        self.last_name = last_name
         self.wentworthID = wentworthID
 
-    def setFirstName(self, firstName):
-        self.firstName = firstName
+    def set_first_name(self, first_name):
+        self.first_name = first_name
 
-    def setLastName(self, lastName):
-        self.lastName = lastName
+    def set_last_name(self, last_name):
+        self.last_name = last_name
 
-    def setWentworthID(self, wentworthID):
+    def set_wentworthID(self, wentworthID):
         self.wentworthID = wentworthID
 
-    def showAllInfo(self):
-        return 'Firstname:{} Lastname:{} Wentworth ID:{}'.format(self.firstName, self.lastName, self.wentworthID)
+    def show_all_info(self):
+        return 'Firstname:{} Lastname:{} Wentworth ID:{}'.format(self.first_name, self.last_name, self.wentworthID)
 
 
 # Creating Student Class
 class Student(User):
-    def searchCourse(self):
+    def search_course(self):
         print('Student Search Course Method')
 
-    def addDropCourse(self):
+    def add_drop_course(self):
         print('Student Add/Drop Course Method')
 
-    def showSchedule(self):
+    def show_schedule(self):
         print('Student Print Schedule Method')
 
 
 # Creating Instructor Class
 class Instructor(User):
     # Overwriting User Classes Wentworth ID Attribute
-    def __init__(self, firstName, lastName, wentworthID=None):
-        super().__init__(firstName, lastName, wentworthID)
+    def __init__(self, first_name, last_name, wentworthID=None):
+        super().__init__(first_name, last_name, wentworthID)
 
         # Sets wentworthID to "N/A" if no wentworthID is given as parameter
         if wentworthID is None:
             self.wentworthID = 'N/A'
 
-    def showSchedule(self):
+    def show_schedule(self):
         print('Instructor Print Schedule Method')
 
-    def showClassList(self):
+    def show_class_list(self):
         print('Instructor Print Class List Method')
 
-    def searchCourse(self):
+    def search_course(self):
         print('Instructor Search Course Method')
 
 
 # Creating Admin Class
 class Admin(User):
     # Overwriting User Classes Wentworth ID Attribute
-    def __init__(self, firstName, lastName, wentworthID=None):
-        super().__init__(firstName, lastName, wentworthID)
+    def __init__(self, first_name, last_name, wentworthID=None):
+        super().__init__(first_name, last_name, wentworthID)
 
         # Sets wentworthID to "N/A" if no wentworthID is given as parameter
         if wentworthID is None:
             self.wentworthID = 'N/A'
 
-    def addCourse(self):
+    def add_course(self):
         print('Admin Add Course Method')
 
-    def removeCourse(self):
+    def remove_course(self):
         print('Admin Remove Course Method')
 
-    def addUser(self):
+    def add_user(self):
         print('Admin Add User Method')
 
-    def removeUser(self):
+    def remove_user(self):
         print('Admin Remove User Method')
 
-    def addStudent(self):
+    def add_student(self):
         print('Admin Add Student Method')
 
-    def removeStudent(self):
+    def remove_student(self):
         print('Admin Remove Student Method')
 
-    def searchRoster(self):
+    def search_roster(self):
         print('Admin Search Roster Method')
 
-    def showRoster(self):
+    def show_roster(self):
         print('Admin Print Roster Method')
 
-    def searchCourse(self):
+    def search_course(self):
         print('Admin Search Course Method')
 
-    def showCourse(self):
+    def show_course(self):
         print('Admin Print Course Method')
 
 
 # Creating Objects
-userObject = User('Jon', 'Binder', 'W00409648')
-studentObject = Student('Carson', 'Mershon', 'W00414141')
-professorObject = Instructor('Douglas', 'Dr. Dow')
-adminObject = Admin('Admin', 'Person')
+user_object = User('Jon', 'Binder', 'W00409648')
+student_object = Student('Carson', 'Mershon', 'W00414141')
+professor_object = Instructor('Douglas', 'Dr. Dow')
+admin_object = Admin('Admin', 'Person')
 
 # Testing Methods
 print('')
 
 # User Class Test
-print(userObject.showAllInfo())
-userObject.setFirstName('JonTest')
-userObject.setLastName('BinderTest')
-userObject.setWentworthID('W00409648Test')
-print(userObject.showAllInfo())
+print(user_object.show_all_info())
+user_object.set_first_name('JonTest')
+user_object.set_last_name('BinderTest')
+user_object.set_wentworthID('W00409648Test')
+print(user_object.show_all_info())
 
 print('')
 
 # Student Class Test
-print(studentObject.showAllInfo())
-studentObject.setFirstName('CarsonTest')
-studentObject.setLastName('MershonTest')
-studentObject.setWentworthID('W00414141Test')
-print(studentObject.showAllInfo())
-studentObject.searchCourse()
-studentObject.addDropCourse()
-studentObject.showSchedule()
+print(student_object.show_all_info())
+student_object.set_first_name('CarsonTest')
+student_object.set_last_name('MershonTest')
+student_object.set_wentworthID('W00414141Test')
+print(student_object.show_all_info())
+student_object.search_course()
+student_object.add_drop_course()
+student_object.show_schedule()
 
 print('')
 
 # Instructor Class Test
-print(professorObject.showAllInfo())
-professorObject.setFirstName('DouglasTest')
-professorObject.setLastName('Dr. DowTest')
-print(professorObject.showAllInfo())
-professorObject.showSchedule()
-professorObject.showClassList()
-professorObject.searchCourse()
+print(professor_object.show_all_info())
+professor_object.set_first_name('DouglasTest')
+professor_object.set_last_name('Dr. DowTest')
+print(professor_object.show_all_info())
+professor_object.show_schedule()
+professor_object.show_class_list()
+professor_object.search_course()
 
 print('')
 
 # Admin Class Test
-print(adminObject.showAllInfo())
-adminObject.setFirstName('AdminTest')
-adminObject.setLastName('PersonTest')
-print(adminObject.showAllInfo())
-adminObject.addCourse()
-adminObject.removeCourse()
-adminObject.addUser()
-adminObject.removeUser()
-adminObject.addStudent()
-adminObject.removeStudent()
-adminObject.searchRoster()
-adminObject.showRoster()
-adminObject.searchCourse()
-adminObject.showCourse()
+print(admin_object.show_all_info())
+admin_object.set_first_name('AdminTest')
+admin_object.set_last_name('PersonTest')
+print(admin_object.show_all_info())
+admin_object.add_course()
+admin_object.remove_course()
+admin_object.add_user()
+admin_object.remove_user()
+admin_object.add_student()
+admin_object.remove_student()
+admin_object.search_roster()
+admin_object.show_roster()
+admin_object.search_course()
+admin_object.show_course()

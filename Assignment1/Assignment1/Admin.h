@@ -18,6 +18,8 @@ public:
     void removeStudentCourse();
     void searchRoster();
     void showRoster();
+    void searchCourse();
+    void showCourse();
 
     // Deconstructor
     ~Admin();

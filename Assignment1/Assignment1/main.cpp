@@ -141,8 +141,8 @@ int main() {
 			cout << " was selected" << endl << "1) Change first name" << endl;
 			cout << "2) Change last name" << endl << "3) Add Course" << endl << "4) Remove Course" << endl;
 			cout << "5) Add User" << endl << "6) Remove User" << endl << "7) Add Student Course" << endl;
-			cout << "8) Remove Student Course" << endl << "9) Search Roster" << endl << "10) Print Roster";
-			cout << endl << ">>";
+			cout << "8) Remove Student Course" << endl << "9) Search Roster" << endl << "10) Print Roster" << endl;
+			cout << "11) Search Course Method" << endl << "12) Show Course Method" << endl << ">>";
 			cin >> userInput;
 			switch (userInput) {
 			// Change First Name
@@ -188,6 +188,14 @@ int main() {
 			// Print Roster
 			case 10:
 				Dave.showRoster();
+				break;
+			// Search Course
+			case 11:
+				Dave.searchCourse();
+				break;
+			// Show Course
+			case 12:
+				Dave.showCourse();
 				break;
 			default:
 				cout << "Invalid Input" << endl;

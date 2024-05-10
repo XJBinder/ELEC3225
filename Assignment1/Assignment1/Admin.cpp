@@ -42,6 +42,14 @@ void Admin::showRoster() {
 	cout << "Print Roster Method" << endl;
 }
 
+void Admin::searchCourse() {
+	cout << "Search Course Method" << endl;
+}
+
+void Admin::showCourse() {
+	cout << "Show Course Method" << endl;
+}
+
 // Deconstructor
 Admin::~Admin() {
 
